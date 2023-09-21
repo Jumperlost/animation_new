@@ -13,9 +13,11 @@
       </div>
       <div class="eye left-eye">
         <div class="red_line"></div>
+        <div class="pupils-left"></div>
       </div>
       <div class="eye right-eye">
         <div class="red_line"></div>
+        <div class="pupils-right"></div>
       </div>
       <div class="mouth"></div>
     </div>
@@ -30,8 +32,25 @@
     <div class="uranus"></div>
     <div class="neptune"></div>
     <div class="orbit">
-      <div class="rocket"></div>
+      <div id="myRocket" class="rocket">
+        <p id="messageText" class="message">Houston, we have a problem...</p>
+        <div id="rocketFire" class="fire"></div>
+      </div>
       <div class="window"></div>
     </div>
   </body>
 </html>
+
+<script>
+  const rocket = document.getElementById("myRocket");
+  const messageText = document.getElementById("messageText");
+  console.log("myRocket");
+  console.log("messageText");
+
+  rocket.addEventListener("click", function () {
+    messageText.style.display = "block";
+  });
+  rocket.addEventListener("mouseleave", function () {
+    messageText.style.display = "none";
+  });
+</script>

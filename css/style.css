@@ -49,6 +49,34 @@ body {
   display: none;
 }
 
+.pupils-left {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.sun:hover .pupils-left {
+  display: none;
+}
+
+.sun:hover .pupils-right {
+  display: none;
+}
+
+.pupils-right {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
 .sun:hover .eye {
   width: 15px;
   height: 15px;
@@ -300,7 +328,7 @@ body {
   left: 15%;
   top: 40%;
   border-radius: 50%;
-  animation: fly 10s infinite linear;
+  animation: fly 40s infinite linear;
 }
 
 @keyframes fly {
@@ -359,5 +387,30 @@ body {
   background-color: #03121a;
   border: 1px solid #39beff;
   top: 45%;
-  left: -1px;
+  left: 0px;
+}
+
+.message {
+  display: none;
+  position: absolute;
+  color: rgb(5, 3, 3);
+  padding: 10px;
+  border: 1px solid #cedce4;
+  border-radius: 25px;
+  z-index: 4;
+  left: 0;
+  top: -100px;
+  background-color: #fafcf7;
+  opacity: 0.6;
+}
+
+.fire::before {
+  position: absolute;
+  content: "";
+  background-color: #d00000;
+  height: 15px;
+  width: 10px;
+  border-radius: 0 0 10px 10px;
+  top: 50px;
+  left: 7px;
 }/*# sourceMappingURL=style.css.map */
