@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +10,7 @@ body {
   background-image: url(../img/univers.jpg);
   background-size: 100%;
 }
-
-.sun {
+body .sun {
   width: 150px;
   height: 150px;
   background-image: url(../img/sunny.png);
@@ -21,6 +21,16 @@ body {
   left: 40%;
   animation: sun 2s linear infinite;
   z-index: 2;
+}
+body .sun .mouth {
+  width: 20px;
+  height: 15px;
+  border: 3px solid black;
+  position: absolute;
+  top: 60%;
+  left: 42%;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .sun:hover {
@@ -40,12 +50,18 @@ body {
   position: absolute;
   animation: eye 2s linear infinite;
 }
-
-.red_line {
+.eye .red_line {
   position: absolute;
   width: 100%;
   height: 2px;
   background-color: #d00000;
+  display: none;
+}
+
+.horns-img {
+  position: absolute;
+  top: -6px;
+  left: 33%;
   display: none;
 }
 
@@ -120,29 +136,11 @@ body {
   box-shadow: 0px 0px 5px #d00000;
 }
 
-.mouth {
-  width: 20px;
-  height: 15px;
-  border: 3px solid black;
-  position: absolute;
-  top: 60%;
-  left: 42%;
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-}
-
-.horns-img {
-  position: absolute;
-  top: -6px;
-  left: 33%;
-  display: none;
-}
-
 .sun:hover .horns-img {
   display: block;
 }
 
-.sun:hover .mercury {
+.mercury {
   height: 25px;
   width: 25px;
   background-image: url(../img/mercury.png);
@@ -413,4 +411,67 @@ body {
   border-radius: 0 0 10px 10px;
   top: 50px;
   left: 7px;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .wrapper {
+  display: flex;
+  width: 45%;
+  margin-right: 0;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .wrapper .wrapper__media {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+body .wrapper .wrapper__map {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+body .inner__media {
+  display: flex;
+  justify-content: end;
+  width: 23%;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.audio-img {
+  width: 315px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+figure {
+  text-align: center;
+  background-color: #010a01;
+  border-radius: 25px 25px 25px 25px;
+}
+
+iframe {
+  border-radius: 25px;
+}
+
+.neon {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+figcaption {
+  font-size: 4.2rem;
+  font-family: "Metal Mania", cursive;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }/*# sourceMappingURL=style.css.map */

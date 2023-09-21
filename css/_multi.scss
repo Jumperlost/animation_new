@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .wrapper {
+    display: flex;
+    width: 45%;
+    margin-right: 0;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    .wrapper__media {
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .wrapper__map {
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  .inner__media {
+    display: flex;
+    justify-content: end;
+    width: 23%;
+    border-radius: 25px 25px 25px 25px;
+  }
+}
+
+.audio-img {
+  width: 315px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+figure {
+  text-align: center;
+  background-color: #010a01;
+  border-radius: 25px 25px 25px 25px;
+}
+
+iframe {
+  border-radius: 25px;
+}
+
+.neon {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+figcaption {
+  font-size: 4.2rem;
+  font-family: "Metal Mania", cursive;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
