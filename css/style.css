@@ -101,6 +101,7 @@ body .sun .mouth {
   position: absolute;
   transform: skew(10deg);
   box-shadow: 0px 0px 5px #d00000;
+  transition: background-color 4s ease;
 }
 
 .sun:hover .mouth {
